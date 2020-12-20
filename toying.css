@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sniglet:wght@400;800&display=swap');
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  max-width: 1500px;
+}
+
+/* Mobile is set as the main display
+and uses media queries for other displays */
+header {
+  position: -webkit-sticky;
+  /* Safari */
+  position: sticky;
+  top: 0;
+  overflow: hidden;
+  background-color: #1c1c1c;
+  height: 100%;
+  z-index: 500;
+}
+
+ul#nav-bar {
+  display: none;
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+ul#nav-bar li {
+  margin-left: -50px;
+  margin-right: -20px;
+  background-color: #2a2a2a;
+  margin-left: 0px;
+}
+
+li#dplus:hover {
+  background-color: #0b2162;
+}
+
+li#netflix:hover {
+  background-color: #a62a24;
+}
+
+li#prime:hover {
+  background-color: #337cb4;
+}
+
+li#navcontact:hover {
+  background-color: green;
+}
+
+ul#nav-bar li a {
+  display:inline-block;
+  font-size: 18px;
+  line-height: 50px;
+  text-transform: uppercase;
+  font-family: Sniglet, cursive;
+  color: white;
+  text-shadow: 2px 2px black, 3px 3px black;
+  text-decoration: none;
+  width:617px;
+  padding:0px 30px;
+}
+
+.hamburger {
+  display: inline-block;
+  cursor: pointer;
+  margin: 10px 10px;
+  padding: 10px 10px;
+}
+
+.hamburger div {
+  background-color: white;
+  width: 28px;
+  height: 3px;
+}
+
+div.bar2 {
+  margin: 6px 0px;
+}
+
+/* Changes hamburger to X icon */
+.toggle-nav .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.toggle-nav .bar2 {
+  opacity: 0;
+}
+
+.toggle-nav .bar3 {
+  -webkit-transform: rotate(45deg) translate(-6px, -4px);
+  transform: rotate(45deg) translate(-6px, -4px);
+}
+
+/* Keep nav bar on top */
+main {
+  z-index: 450;
+}
+
+section {
+  margin: 5%;
+}
+
+.banner {
+  position: relative;
+  width: 100%;
+}
+
+section#main-banner {
+  margin: 0px;
+  margin-bottom: 25px;
+  height: 400px;
+  overflow: hidden;
+  margin-top: 0px
+}
+
+section#main-banner img {
+  max-width: 100%;
+  min-height: 500px;
+  object-fit: cover;
+  object-position: 57%;
+}
+
+h1, h2 {
+  font-family: Sniglet, cursive;
+}
+
+/* Aligns all h1 within the banner */
+h1 {
+  text-transform: uppercase;
+  font-weight: 600;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  padding: 20px;
+  transform: translate(-50%, -50%);
+  font-size: 50px;
+  color: white;
+  text-align: center;
+  background-color: #000000B3;
+}
+
+h2 {
+  font-size: 30px;
+  color: black;
+  text-align: center;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+
+p {
+  margin: 0px 30px 0px 30px;
+  text-align: justify;
+  color: black;
+  font-size: 18px;
+  font-family: Lato, sans-serif;
+  text-transform: none;
+}
+
+/* Desktop Display */
+@media screen and (min-width: 617px) {
+
+  /* Changes hamburger navigation to full navigation */
+  .hamburger {
+    display: none;
+  }
+
+  ul#nav-bar {
+    display: block;
+    width: 100%;
+    padding: 9px 0 9px 0;
+  }
+
+  ul#nav-bar li {
+    background-color: #1c1c1c;
+    display: inline;
+    margin: 0px;
+    padding: 30px 0px 30px 0px;
+  }
+
+  ul#nav-bar li a {
+    display:inline;
+    margin: 0px;
+    padding: 30px;
+  }
+
+  /* Adjust the banner image position */
+  section#main-banner img {
+    max-width: 100%;
+    min-height: 500px;
+    object-fit: cover;
+    object-position: 65% -90px;
+  }
+
+  /* Adjusts h1 size */
+  h1 {
+    font-size: 50px;
+    top: 40%;
+  }
+}
